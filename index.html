@@ -1,0 +1,560 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Old Mutual Wealth Report</title>
+<link href="css/custom-theme/jquery-ui-1.8.21.custom.css" type="text/css" rel="stylesheet"/>
+<link href="css/style.css" type="text/css" rel="stylesheet"/>
+<script src="script/jquery-1.7.2.min.js"></script>
+<script src="script/jquery-ui-1.8.21.custom.min.js"></script>
+<script src="script/jquery.mfs.js"></script>
+</head>
+<body>
+<header class="header">
+  <div class="wrapper header-bg">
+    <div class="logo"> <a href="#"><img src="images/logo.png" alt="Old Mutual Wealth" width="214" height="61.5" ></a> </div>
+  </div>
+  <div class="header-bar"></div>
+</header>
+<div class="wrapper">
+  <div  class="content-wrapper">
+    <h1>John Smith's client report</h1>
+    <div class="links"><span class="PDF-guide"><a href="#"><span class="icon-pdf"></span>Guide to client reporting</a> </span></div>
+    <div class="client-report-container">
+      <h2 class="header-band smaller vignette"><span>Report Details</span></h2>
+      <div class="client-name"> <span class="name-title">
+        <label>Client name:</label>
+        </span> <span class="name">John Smith</span> </div>
+      <div class="portfolio-name"> <span class="name-title">
+        <label>Portfolio name:</label>
+        </span> <span class="name">SIS000101</span> </div>
+      <div class="adviser-name"> <span class="name-title">
+        <label>Adviser name: </label>
+        </span> <span class="name">ABC Adviser</span> </div>
+    </div>
+    <div class="content">
+      <div class="content-section">
+        <h5 class="corporate-band smaller"> <span>Select Period and Type</span> </h5>
+        <div class="date-container">
+          <div class="set-period"> <span class="name-title">
+            <label>Select reporting period </label>
+            </span>
+            <div class="date dropdown">
+              <form class="date-period">
+                <select>
+                  <option  value="" selected>Select a range </option>		
+                  <option  value="specifyDates">Custom date range </option>
+                  <option  value="taxYearToDate">Previous year </option>
+                  <option value="lastTaxYear">Previous six months </option>
+                  <option  value="lastMonth">Previous 3 years </option>
+                  <option value="last3months">Previous 5 years </option>
+                  <option selected value="last6months">Year to date </option>
+                </select>
+              </form>
+            </div>
+          </div>
+          <div class="startdate-enddate-container"> <span class="start-date"><span class="label">From</span> <span class="icon-date"></span>
+            <input type="text" id="from" name="from" placeholder="dd/mm/yy">
+            </span> <span class="end-date"><span class="label">To</span> <span class="icon-date"></span>
+            <input type="text" id="to" name="to" placeholder="dd/mm/yy">
+			  </span> </span> </div>
+        </div>
+      <div class="report-type"> <span class="name-title">
+          <label>Select report type</label><span class="icon-help"></span><div class="report-container"> <span class="arrow"></span>
+            <div class="tooltip_content">
+              <div class="tooltip_txt"><strong>Small:</strong> Summary level report for selected accounts</div>
+              <!-- <div class="tooltip_txt"><strong>Medium:</strong> Summary and account level report, for selected accounts</div> -->
+              <div class="tooltip_txt"> <strong>Large:</strong> Summary and account level report, including transaction history, for selected accounts</div>
+            </div>
+          </div>
+        </div>
+          </span>
+          <div class="report-type-drop-down dropdown">
+            <form class="report-type">
+              <select>
+                <option selected value="small">Small</option>
+                <option value="large">Large</option>
+              </select>
+            </form>
+             </div>
+          
+      </div>
+      <div class="content-section">
+         <h5 class="corporate-band smaller"> <span>Select Benchmark</span> </h5>
+         <div class="average-container">
+          <form class="select-average" >
+            <div class="radiobutton">
+             <span class="weight"> <input type="radio" name="average" value="weightedaverage" id="weightedaverage" checked> </span>
+
+              <span class="label">Weighted sector average</span>
+            </div>
+            <div class="radiobutton">
+             <span class="weight"> <input id="single" type="radio" name="average" value="single"></span>
+
+              <span class="label"> Single index or sector average</span>
+            </div>  
+          </form> 
+          <div class="option2">
+           <div class="set-index"> <span class="name-title">
+            <label>Select Index</label>
+            </span>
+            <div class="index dropdown">
+              <form class="getindex">
+                <select>
+                  <option  value=" " selected>Select an Index </option>
+					<option value="">Bank Of England 1 Year Fixed Rate Bond IUMWTFA</option>
+					<option value="">Bank Of England 1 Year Fixed Rate Bond IUMWTFA + 2%</option>
+					<option value="">Bank Of England 1 Year Fixed Rate Bond IUMWTFA + 3.5%</option>
+					<option value="">Bank Of England 1 Year Fixed Rate Bond IUMWTFA + 5%</option>
+					<option value="">Bank Of England Base Rate</option>
+					<option value="">Bank Of England Base Rate + 3%</option>
+					<option value="">Bank Of England Base Rate + 3.5</option>
+					<option value="">Bank Of England Base Rate + 4%</option>
+					<option value="">Bank Of England Base Rate + 4.5%</option>
+					<option value="">Bank Of England Base Rate + 5%</option>
+					<option value="">Bats UK 100</option>
+					<option value="">Bats UK 250</option>
+					<option value="">Bats UK 350</option>
+					<option value="">Bats UK All Companies</option>
+					<option value="">Bats UK Alternative 100</option>
+					<option value="">Bats UK Business Services Sector</option>
+					<option value="">Bats UK Consumer Cyclicals Sector</option>
+					<option value="">Bats UK Consumer Non-Cyclicals Sector</option>
+					<option value="">Bats UK Consumer Services Sector</option>
+					<option value="">Bats UK Energy Sector</option>
+					<option value="">Bats UK Finance Sector</option>
+					<option value="">Bats UK Healthcare Sector</option>
+					<option value="">Bats UK Industrials Sector</option>
+					<option value="">Bats UK Non-Energy Materials Sector</option>
+					<option value="">Bats UK Small Companies</option>
+					<option value="">Bats UK Technology Sector</option>
+					<option value="">Bats UK Telecommunications Sector</option>
+					<option value="">Bats UK Utilities Sector</option>
+					<option value="">EMIX Euroland</option>
+					<option value="">EMIX Europe</option>
+					<option value="">EMIX Europe Austria</option>
+					<option value="">EMIX Europe Belgium</option>
+					<option value="">EMIX Europe Denmark</option>
+					<option value="">EMIX Europe ex UK</option>
+					<option value="">EMIX Europe Finland</option>
+					<option value="">EMIX Europe France</option>
+					<option value="">EMIX Europe Germany</option>
+					<option value="">EMIX Europe Global Steel</option>
+					<option value="">EMIX Europe Ireland</option>
+					<option value="">EMIX Europe Italy</option>
+					<option value="">EMIX Europe Netherlands</option>
+					<option value="">EMIX Europe Norway</option>
+					<option value="">EMIX Europe Portugal</option>
+					<option value="">EMIX Europe Spain</option>
+					<option value="">EMIX Europe Sweden</option>
+					<option value="">EMIX Europe Switzerland</option>
+					<option value="">EMIX Europe United Kingdom</option>
+					<option value="">Euromoney Argentina</option>
+					<option value="">Euromoney Brazil</option>
+					<option value="">Euromoney Chile</option>
+					<option value="">Euromoney China</option>
+					<option value="">Euromoney Cmt</option>
+					<option value="">Euromoney Colombia</option>
+					<option value="">Euromoney Croatia</option>
+					<option value="">Euromoney Cyprus</option>
+					<option value="">Euromoney Czech Republic</option>
+					<option value="">Euromoney Dragon 300</option>
+					<option value="">Euromoney EAFE (Cont Europe) Smaller</option>
+					<option value="">Euromoney EAFE (UK) Smaller</option>
+					<option value="">Euromoney EAFE Austria Smaller</option>
+					<option value="">Euromoney Emerging Europe</option>
+					<option value="">Euromoney Emerging Europe (x R)</option>
+					<option value="">Euromoney Estonia</option>
+					<option value="">Euromoney Global Base Metals</option>
+					<option value="">Euromoney Global Coal Mining</option>
+					<option value="">Euromoney Global Diversified Mining</option>
+					<option value="">Euromoney Global Gold</option>
+					<option value="">Euromoney Global Gold Mining & Energy</option>
+					<option value="">Euromoney Global Mining</option>
+					<option value="">Euromoney Global Mining & Energy</option>
+					<option value="">Euromoney Global Mining 100</option>
+					<option value="">Euromoney Global Mining 50</option>
+					<option value="">Euromoney Global Mining Constrained Weight</option>
+					<option value="">Euromoney Global Oth Mets/Mins</option>
+					<option value="">Euromoney Hong Kong</option>
+					<option value="">Euromoney Hungary</option>
+					<option value="">Euromoney India</option>
+					<option value="">Euromoney India Subcontinent</option>
+					<option value="">Euromoney Indonesia</option>
+					<option value="">Euromoney Korea</option>
+					<option value="">Euromoney Latin America</option>
+					<option value="">Euromoney Latin America X Mexico</option>
+					<option value="">Euromoney Lithuania</option>
+					<option value="">Euromoney Malaysia</option>
+					<option value="">Euromoney Malta</option>
+					<option value="">Euromoney Meem</option>
+					<option value="">Euromoney Meemexr</option>
+					<option value="">Euromoney Mexico</option>
+					<option value="">Euromoney Mining & Steel</option>
+					<option value="">Euromoney Mm</option>
+					<option value="">Euromoney Mmexr</option>
+					<option value="">Euromoney Pakistan</option>
+					<option value="">Euromoney Peru</option>
+					<option value="">Euromoney Philippines</option>
+					<option value="">Euromoney Poland</option>
+					<option value="">Euromoney Romania</option>
+					<option value="">Euromoney Russia</option>
+					<option value="">Euromoney Sa 50 (Floats)</option>
+					<option value="">Euromoney Sceem</option>
+					<option value="">Euromoney Singapore</option>
+					<option value="">Euromoney Slovakia</option>
+					<option value="">Euromoney Slovenia</option>
+					<option value="">Euromoney Smaller Austria</option>
+					<option value="">Euromoney Smaller Belgium</option>
+					<option value="">Euromoney Smaller Canada</option>
+					<option value="">Euromoney Smaller China</option>
+					<option value="">Euromoney Smaller Denmark</option>
+					<option value="">Euromoney Smaller Euro X UK Leaders</option>
+					<option value="">Euromoney Smaller Euroland</option>
+					<option value="">Euromoney Smaller Euroland Leaders</option>
+					<option value="">Euromoney Smaller Europe (Ex UK)</option>
+					<option value="">Euromoney Smaller Europe Ex Swed</option>
+					<option value="">Euromoney Smaller Europe Inc UK</option>
+					<option value="">Euromoney Smaller Europe Leaders</option>
+					<option value="">Euromoney Smaller Finland</option>
+					<option value="">Euromoney Smaller France</option>
+					<option value="">Euromoney Smaller Germany</option>
+					<option value="">Euromoney Smaller Hong Kong</option>
+					<option value="">Euromoney Smaller Indonesia</option>
+					<option value="">Euromoney Smaller Ireland</option>
+					<option value="">Euromoney Smaller Italy</option>
+					<option value="">Euromoney Smaller Japan (GBP)</option>
+					<option value="">Euromoney Smaller Korea</option>
+					<option value="">Euromoney Smaller Malaysia</option>
+					<option value="">Euromoney Smaller Netherlands</option>
+					<option value="">Euromoney Smaller Norway Indx</option>
+					<option value="">Euromoney Smaller Others Leaders</option>
+					<option value="">Euromoney Smaller Philippines</option>
+					<option value="">Euromoney Smaller Portugse Indx</option>
+					<option value="">Euromoney Smaller SE Asia Cos</option>
+					<option value="">Euromoney Smaller Singapore</option>
+					<option value="">Euromoney Smaller Spanish</option>
+					<option value="">Euromoney Smaller Sweden</option>
+					<option value="">Euromoney Smaller Switzerland</option>
+					<option value="">Euromoney Smaller Taiwan</option>
+					<option value="">Euromoney Smaller Thailand</option>
+					<option value="">Euromoney Smaller UK</option>
+					<option value="">Euromoney Smaller UK Leaders</option>
+					<option value="">Euromoney Smeem</option>
+					<option value="">Euromoney Sri Lanka</option>
+					<option value="">Euromoney Taiwan</option>
+					<option value="">Euromoney Thailand</option>
+					<option value="">Euromoney Turkey</option>
+					<option value="">Euromoney USA 700</option>
+					<option value="">Euromoney WEXUS</option>
+					<option value="">Euromoney WEXUS Australia</option>
+					<option value="">Euromoney WEXUS Belgium</option>
+					<option value="">Euromoney WEXUS Denmark</option>
+					<option value="">Euromoney WEXUS Finland</option>
+					<option value="">Euromoney WEXUS France</option>
+					<option value="">Euromoney WEXUS Germany</option>
+					<option value="">Euromoney WEXUS Hong Kong</option>
+					<option value="">Euromoney WEXUS Ireland</option>
+					<option value="">Euromoney WEXUS Italy</option>
+					<option value="">Euromoney WEXUS Japan</option>
+					<option value="">Euromoney WEXUS Netherlands</option>
+					<option value="">Euromoney WEXUS New Zealand</option>
+					<option value="">Euromoney WEXUS Norway</option>
+					<option value="">Euromoney WEXUS Portugal</option>
+					<option value="">Euromoney WEXUS Singapore</option>
+					<option value="">Euromoney WEXUS South Asia</option>
+					<option value="">Euromoney WEXUS Spain</option>
+					<option value="">Euromoney WEXUS Sweden</option>
+					<option value="">Euromoney WEXUS Switzerland</option>
+					<option value="">Euromoney WINCUS</option>
+					<option value="">Freedom Smart Beta UK Dividend</option>
+					<option value="">Freedom UK 100</option>
+					<option value="">Freedom UK 100 Equal Weight</option>
+					<option value="">Freedom UK 1000</option>
+					<option value="">Freedom UK 250</option>
+					<option value="">Freedom UK 250 Equal Weight</option>
+					<option value="">Freedom UK 50</option>
+					<option value="">Freedom UK 50 Equal Weight</option>
+					<option value="">Freedom UK 500</option>
+					<option value="">Freedom UK 500 Consumer Products</option>
+					<option value="">Freedom UK 500 Equal Weight</option>
+					<option value="">Freedom UK 500 Ex-Investment</option>
+					<option value="">Freedom UK 500 Financial</option>
+					<option value="">Freedom UK 500 Fuel</option>
+					<option value="">Freedom UK 500 Manufacturing</option>
+					<option value="">Freedom UK 500 Materials</option>
+					<option value="">Freedom UK 500 Medical & Health Care</option>
+					<option value="">Freedom UK 500 Services</option>
+					<option value="">Freedom UK 500 Technology</option>
+					<option value="">Freedom UK 500 Telecommunications</option>
+					<option value="">Freedom UK 500 Utilities</option>
+					<option value="">Freedom UK All Stock</option>
+					<option value="">ONS Average Weekly Earnings (Private Sector)</option>
+					<option value="">ONS Average Weekly Earnings (Public Sector)</option>
+					<option value="">ONS Average Weekly Earnings (Whole Economy)</option>
+					<option value="">ONS House Price</option>
+					<option value="">UK Consumer Price</option>
+					<option value="">UK Consumer Price + 1%</option>
+					<option value="">UK Consumer Price + 1.5%</option>
+					<option value="">UK Consumer Price + 2%</option>
+					<option value="">UK Consumer Price + 2.5%</option>
+					<option value="">UK Consumer Price + 3%</option>
+					<option value="">UK Consumer Price + 3.5%</option>
+					<option value="">UK Consumer Price + 4%</option>
+					<option value="">UK Consumer Price + 4.5%</option>
+					<option value="">UK Consumer Price + 5%</option>
+					<option value="">UK Consumer Price + 6%</option>
+					<option value="">UK Retail Price</option>
+					<option value="">UK Retail Price + 1%</option>
+					<option value="">UK Retail Price + 1.5%</option>
+					<option value="">UK Retail Price + 2%</option>
+					<option value="">UK Retail Price + 2.5%</option>
+					<option value="">UK Retail Price + 3%</option>
+					<option value="">UK Retail Price + 3.5%</option>
+					<option value="">UK Retail Price + 4%</option>
+					<option value="">UK Retail Price + 4.5%</option>
+					<option value="">UK Retail Price + 5%</option>
+					<option value="">UK Retail Price + 6%</option>
+
+                </select>
+              </form>
+            </div>
+           
+            
+          </div>
+           <span>or</span>
+          <div class="set-sector-average"> <span class="name-title">
+            <label>Select Sector </label>
+            </span>
+            <div class="sector dropdown">
+              <form class="getsector">
+                <select>
+                   <option selected  value=" ">Select a Sector</option>
+                  <option   value=" ">Asia Pacific Excluding Japan</option>
+                  <option  value=" ">Asia Pacific Including Japan</option>
+                  <option  value=" ">Commodity & Energy</option>
+                  <option  value=" ">Deposit & Treasury</option>
+                 <option  value=" "> Europe Excluding UK</option>
+                  <option  value=" ">Europe Including UK</option>
+                  <option  value=" ">Flexible Investment</option>
+                  <option  value=" ">Global Emerging Markets</option>
+                 <option  value=" "> Global Equities</option>
+                  <option  value=" ">Global Fixed Interest</option>
+                  <option  value=" "> High Yield</option>
+                  <option  value=" "> Property</option>
+                  <option  value=" ">Japan</option>
+                  <option  value=" ">Mixed Investment 0%-35% Shares</option>
+                  <option  value=" ">Mixed Investment 20%-60% Shares</option>
+                  <option  value=" ">Mixed Investment 40%-85% Shares</option>
+                  <option  value=" ">Money Market</option>
+                  <option  value=" ">North America</option>
+                  <option  value=" ">Not Yet Assigned</option>
+                  <option  value=" ">Protected/Guaranteed</option>
+                  <option  value=" ">Specialist</option>
+                  <option  value=" ">Sterling Corporate Bond</option>
+                  <option  value=" ">Sterling Fixed Interest</option>
+                  <option  value=" ">Sterling High Yield</option>
+                  <option  value=" ">Sterling Long Bonds</option>
+                  <option  value=" ">Sterling Strategic Bond</option>
+                  <option  value=" ">UK All Companies</option>
+                  <option  value=" ">UK Direct Property</option>
+                  <option  value=" ">UK Equity Income</option>
+                  <option  value=" ">UK Gilts</option>
+                  <option  value=" ">UK Index - Linked Gilts</option>
+                  <option  value=" ">UK Property Securities</option>
+                  <option  value=" ">UK Smaller Companies</option>
+                  <option  value=" ">Unclassified</option>
+                  <option  value=" ">With Profits</option>
+                  <option  value=" ">Asia Pacific Excluding Japan</option>
+                  <option  value=" ">Asia Pacific Including Japan</option>
+                  <option  value=" ">China/Greater China</option>
+                  <option  value=" ">Europe Excluding UK</option>
+                  <option  value=" ">Europe Including UK</option>
+                  <option  value=" ">European Smaller Companies</option>
+                  <option  value=" ">Flexible Investment</option>
+                  <option  value=" ">Global</option>
+                  <option  value=" ">Global Bonds</option>
+                  <option  value=" ">Global Emerging Market Bond</option>
+                  <option  value=" ">Global Emerging Markets</option>
+                  <option  value=" ">Global Equity Income</option>
+                  <option  value=" ">Japan</option>
+                  <option  value=" ">Japanese Smaller Companies</option>
+                  <option  value=" ">Mixed Investment 0%-35% Shares</option>
+                  <option  value=" ">Mixed Investment 20%-60% Shares</option>
+                  <option  value=" ">Mixed Investment 40%-85% Shares</option>
+                  <option  value=" ">Money Market</option>
+                  <option  value=" ">North America</option>
+                  <option  value=" ">North American Smaller Companies</option>
+                  <option  value=" ">Not Yet Assigned</option>
+                  <option  value=" ">Personal Pensions</option>
+                  <option  value=" ">Property</option>
+                  <option  value=" ">Protected</option>
+                  <option  value=" ">Short Term Money Market</option>
+                  <option  value=" ">Specialist</option>
+                  <option  value=" ">Sterling Corporate Bond</option>
+                  <option  value=" ">Sterling High Yield</option>
+                  <option  value=" ">Sterling Strategic Bond</option>
+                  <option  value=" ">Targeted Absolute Return</option>
+                  <option  value=" ">Technology & Telecoms</option>
+                  <option  value=" ">UK All Companies</option>
+                  <option  value=" ">UK Equity & Bond Income</option>
+                  <option  value=" ">UK Equity Income</option>
+                  <option  value=" ">UK Gilts</option>
+                  <option  value=" ">UK Index - Linked Gilts</option>
+                  <option  value=" ">UK Smaller Companies</option>
+                  <option  value=" ">Unauthorised</option>
+                  <option  value=" ">Unclassified</option>
+
+                </select>
+              </form>
+            </div>
+          </div>
+        </div>
+         </div>
+      </div>
+      <div class="content-section last">
+         <h5 class="corporate-band smaller"> <span>Upload Logo</span> </h5>
+         <div class="uploadlogo-container">
+          <div class="add-logo">
+            Add your firm logo
+            <input class="choose_file" id="adviserGroup_logo" type="file">
+          </div>
+         </div> 
+
+      </div>
+    </div>
+    <div class="comments-container">
+      <h5><span>Adviser comments</span></h5>
+
+      <div id="Reports-tab" class="tab-content">
+          <textarea  class="message" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" maxlength="2000" placeholder="Type your comment here"></textarea>
+          <span class="countdown"></span> </div>
+      <!-- <div id="tabs" class="tabNav">
+        <ul class="tabs-menu">
+          <li class="report-comments"><a href="#tabs-1">Report comments</a></li>
+          <li class="investment-account"><a href="#tabs-2">Investment Account IA1000111-001</a></li>
+          <li class="stocks-shares-ISA"><a href="#tabs-3">Stocks & Shares ISA IS1012222-001</a></li>
+          <li class="retirement-account"><a href="#tabs-4">Retirement Account RA1000111-001</a></li>
+          <li class="drawdown-account"><a href="#tabs-5"> Drawdown Account DA1000111-001</a></li>
+          <li class="retire-account"><a href="#tabs-6">Retire 2 Account RR1000111-001</a></li>
+          <li class="cash-ISA-account"><a href="#tabs-7">Cash ISA  Account CI1000111-001</a></li>
+          <li class="additional-comments"><a href="#tabs-8">Additional comments</a></li>
+        </ul>
+        <div id="tabs-1" class="tab-content">
+          <textarea class="message" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" maxlength="750" placeholder="Type your comment here"></textarea>
+          <span class="countdown"></span> </div>
+        <div id="tabs-2" class="tab-content">
+          <textarea   class="message" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" maxlength="2000" placeholder="Type your comment here"></textarea>
+          <span class="countdown"></span> </div>
+        <div id="tabs-3" class="tab-content">
+          <textarea  class="message" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" maxlength="2000" placeholder="Type your comment here"></textarea>
+          <span class="countdown"></span> </div>
+        <div id="tabs-4" class="tab-content">
+          <textarea  class="message" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" maxlength="2000" placeholder="Type your comment here"></textarea>
+          <span class="countdown"></span> </div>
+        <div id="tabs-5" class="tab-content">
+          <textarea  class="message" onfocus="if(this.value==this.defaultValue)this.value=''; " onblur="if(this.value=='')this.value=this.defaultValue;" maxlength="2000" placeholder="Type your comment here"></textarea>
+          <span class="countdown"></span> </div>
+        <div id="tabs-6" class="tab-content">
+          <textarea class="message" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" maxlength="2000" placeholder="Type your comment here"></textarea>
+          <span class="countdown"></span> </div>
+        <div id="tabs-7" class="tab-content">
+          <textarea class="message" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" maxlength="2000" placeholder="Type your comment here"></textarea>
+          <span class="countdown"></span> </div>
+        <div id="tabs-8" class="tab-content">
+          <textarea class="message" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" maxlength="1500" placeholder="Type your comment here"></textarea>
+          <span class="countdown"></span> </div>
+      </div> -->
+    </div>
+    <div class="footer-btn-container">
+      <button class="btn_white fl">Cancel</button>
+      <button class="btn_white fr">Generate Report</button>
+    </div>
+  </div>
+  <div class="error-msg"> <span class="ico-error"></span><span>Some of the details are incorrect. Please correct before you continue</span> </div>
+</div>
+<script>
+ 
+	 $(document).ready(function(e) {
+		 updateCountdownAll();
+    	$('.message').live('input', updateCountdown);
+		$('.message').focus('input', updateCountdown);
+          $('form').mfs();
+		$(".set-period .mfs-options li a").on('click', function(){
+			var date_period = $(".date-period a.mfs-selected-option").text().trim();
+			var _date_type = "Custom date range";
+			if(_date_type === date_period){
+				$(".startdate-enddate-container").css("display","inline-block");
+			}
+			else{
+				$(".startdate-enddate-container").css("display","none");
+			}
+		});
+  		$(".icon-help, .report-container").mouseover(function(e) {
+            $(".report-container").addClass("active");
+			$(".icon-help").addClass("ico-active")
+        });
+		$(".icon-help, .report-container").mouseleave(function(e) {
+            $(".report-container").removeClass("active");
+			$(".icon-help").removeClass("ico-active")
+        });
+		
+		$(".icon-help").click(function(e) {
+            if($(".report-container").hasClass("active")){
+					$(".report-container").removeClass("active");
+					$(this).removeClass("ico-active");
+				}
+				else{
+					$(".report-container").addClass("active");
+					$(this).addClass("ico-active");
+					}
+        });
+		
+		 
+    });
+$(function(){
+    $(".radiobutton input[type='radio']").click(function() {   
+      if($(".radiobutton input[type='radio']:checked").val()==="single"){
+        $(".option2").addClass("show-option")
+      }
+      else{
+       $(".option2").removeClass("show-option") 
+      }
+    });
+      
+});
+	$( function() {
+    $("#from").datepicker({ dateFormat: "dd/mm/yy" });
+	  $("#to").datepicker({ dateFormat: "dd/mm/yy" });
+	  $( "#tabs" ).tabs();
+  });
+function updateCountdownAll() {
+    $('.message').each(function () {
+        updateCountdown(this);
+		//$(this).text("Type your comment here");
+    });
+}
+function updateCountdown(e) {
+    var currentElement;
+    if (e.target) {
+        currentElement = e.target;
+    } else {
+        currentElement = e;
+    }
+    var maxLengh = $(currentElement).attr('maxlength');
+	var messageLengh = $(currentElement).val().length;
+	var remaining = maxLengh - messageLengh;
+    $(currentElement).nextAll('.countdown:first').text( 'Characters left:' + remaining );
+	var parentTab = $(currentElement).parent('.tab-content').attr("id");
+	var menuTab = $('.tabs-menu').find("[href='#" + parentTab +"']").parent();
+			if(messageLengh !== 0){		
+				menuTab.addClass("text-updated");
+			}
+			else{
+				menuTab.removeClass("text-updated");
+				}
+	}
+ 
+  </script>
+</body>
+</html>
